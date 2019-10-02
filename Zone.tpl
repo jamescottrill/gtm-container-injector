@@ -10,7 +10,7 @@ ___INFO___
 
 {
   "displayName": "Zone",
-  "categories": ["TAG_MANAGEMENT","TAG_MANAGEMENT"],
+  "categories": ["TAG_MANAGEMENT","UTILITY"],
   "description": "Load Containers on certain pages à la GTM360 Zones",
   "securityGroups": [],
   "id": "cvt_temp_public_id",
@@ -132,7 +132,7 @@ const onSuccess = () => {
   log('Zone Loaded');
   data.gtmOnSuccess();
 };
-e
+
 const onFailure = () => {
   log('Zone Failed ');
   data.gtmOnFailure();
