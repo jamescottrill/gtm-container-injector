@@ -9,9 +9,9 @@ Google may provide), as modified from time to time.
 ___INFO___
 
 {
-  "displayName": "Zone",
+  "displayName": "Container Injection",
   "categories": ["TAG_MANAGEMENT","UTILITY"],
-  "description": "Load Containers on certain pages à la GTM360 Zones",
+  "description": "Allows containers to be loaded based on pre-defined conditions.",
   "securityGroups": [],
   "id": "cvt_temp_public_id",
   "type": "TAG",
