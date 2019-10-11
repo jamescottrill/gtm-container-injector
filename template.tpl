@@ -9,7 +9,7 @@ Google may provide), as modified from time to time.
 ___INFO___
 
 {
-  "displayName": "Container Injection",
+  "displayName": "Container Injector",
   "categories": ["TAG_MANAGEMENT","UTILITY"],
   "description": "Allows containers to be loaded based on pre-defined conditions.",
   "securityGroups": [],
