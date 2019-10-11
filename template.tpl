@@ -37,7 +37,7 @@ ___TEMPLATE_PARAMETERS___
       },
       {
         "args": [
-          "GTM-[A-Z0-9]{5,8}"
+          "GTM-[A-Z0-9]{4,8}"
         ],
         "type": "REGEX"
       }
@@ -129,12 +129,12 @@ const containerId = data.containerId;
 const dataLayerName = data.dataLayerName ? data.dataLayerName : 'dataLayer' ;
 
 const onSuccess = () => {
-  log('Zone Loaded');
+  log('Container Loaded');
   data.gtmOnSuccess();
 };
 
 const onFailure = () => {
-  log('Zone Failed ');
+  log('Container Failed ');
   data.gtmOnFailure();
 };
 const url = 'https://www.googletagmanager.com/gtm.js?id='+containerId+'&l='+dataLayerName;
