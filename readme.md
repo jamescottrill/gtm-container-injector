@@ -11,10 +11,10 @@ ___
 ### 1. Split your tags up
 
 Identify what category your different tags come under. The standard sections are:
-..* Strictly Necessary
-..* Performance
-..* Marketing
-..* Functional
+  * Strictly Necessary
+  * Performance
+  * Marketing
+  * Functional
 
 How you choose to break your tags up, though, is entirely between you and your/your client's legal department.
 
@@ -26,13 +26,13 @@ Your master container will be the container that you load on each page. It's imp
 
 Cookie consent tools can work in one of two ways: All or Nothing OR Pick n Mix. To trigger the GTM containers to load, you will need:
 
-..1. An event when a user accepts cookies.
+  1. An event when a user accepts cookies.
 
 This will enable your marketing tags to fire on the first page. You don't need to worry about tags that fire off events that have already happened (Page Load, DOM Ready, Window Loaded or custom events), as long as you're using the same dataLayer these will all be processed when the container loads.
 
 Create a Custom Event variable that matches the event fired when someone accepts cookies. If this doesn't happen then you'll have to do some clever JavaScript to identify which of the cookie types a user has accepted and use a click trigger when they click the accept button.
 
-..2. A Page Load event that reads the cookie consent cookie in the browser.
+  2. A Page Load event that reads the cookie consent cookie in the browser.
 
 This works for every subsequent page. Create a First Party Cookie variable for the cookie that your consent tool sets and decode the URI. Create a Page View event for every type of container you want to load and set the firing condition for your first party cookie containing the string that your cookie sets when the user has opted in.
 
