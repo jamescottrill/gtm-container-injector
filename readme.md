@@ -28,15 +28,15 @@ Cookie consent tools can work in one of two ways: All or Nothing OR Pick n Mix. 
 
   1. An event when a user accepts cookies.
 
-This will enable your marketing tags to fire on the first page. You don't need to worry about tags that fire off events that have already happened (Page Load, DOM Ready, Window Loaded or custom events), as long as you're using the same dataLayer these will all be processed when the container loads.
+   This will enable your marketing tags to fire on the first page. You don't need to worry about tags that fire off events that have already happened (Page Load, DOM Ready, Window Loaded or custom events), as long as you're using the same dataLayer these will all be processed when the container loads.
 
-Create a Custom Event variable that matches the event fired when someone accepts cookies. If this doesn't happen then you'll have to do some clever JavaScript to identify which of the cookie types a user has accepted and use a click trigger when they click the accept button.
+   Create a Custom Event variable that matches the event fired when someone accepts cookies. If this doesn't happen then you'll have to do some clever JavaScript to identify which of the cookie types a user has accepted and use a click trigger when they click the accept button.
 
   2. A Page Load event that reads the cookie consent cookie in the browser.
 
-This works for every subsequent page. Create a First Party Cookie variable for the cookie that your consent tool sets and decode the URI. Create a Page View event for every type of container you want to load and set the firing condition for your first party cookie containing the string that your cookie sets when the user has opted in.
+   This works for every subsequent page. Create a First Party Cookie variable for the cookie that your consent tool sets and decode the URI. Create a Page View event for every type of container you want to load and set the firing condition for your first party cookie containing the string that your cookie sets when the user has opted in.
 
-This string might be something like 'marketing:1' or 'ACCEPTED' or a random nubmer string '0_19232:1'. Just make sure that it identifies the opt-in version.
+   This string might be something like 'marketing:1' or 'ACCEPTED' or a random nubmer string '0_19232:1'. Just make sure that it identifies the opt-in version.
 
 ### 4. Test it out
 
