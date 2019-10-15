@@ -7,6 +7,12 @@ ___
 Simply put, GDPR. The bane of every analytics professional, other than ITP, obviously. Now we have to provide a mechanism where users can opt in to receiving cookies and other device storage.
 
 There are companies that allow you to poll your site visitors, and then store their preferences in a cookie (ironic, I know), but this on its own doesn't do anything, you still have to link your marketing tags up to the cookie consent platform. This is where the different containers come in.
+
+But James, I hear you say, we already do this. We have an attribute on each tag that determines if it can fire or not. That's great, however it's a lot of effort to edit the triggers for **_every tag_**. It's also possible to forget one of your tags or to get the triggers wrong. If you don't load a container until a user has opted in then the marketing tags then there's no way a tag can accidentally fire. If you need to change how your cookie consent tool works, you only have to do this in one place.
+
+By having separate containers you can limit access where it's not requried and allow marketing agencies to add tags without them messing up your beautiful analytics tracking.
+
+So now we're all agreed that this is a good idea, let's get going.
 ___
 ### 1. Split your tags up
 
@@ -24,7 +30,9 @@ Your master container will be the container that you load on each page. It's imp
 
 ### 3. Create the logic
 
-Cookie consent tools can work in one of two ways: All or Nothing OR Pick n Mix. To trigger the GTM containers to load, you will need:
+Cookie consent tools can work in one of two ways: All or Nothing __OR__ Pick n Mix. Both of these will work with this method, you just need slightly more work with Pick n Mix.
+
+To trigger the GTM containers to load, you will need:
 
   1. An event when a user accepts cookies.
 
